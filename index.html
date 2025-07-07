@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerHub - Tu Centro de Videojuegos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="site-title">GamerHub</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" data-section-id="homeSection">Inicio</a></li>
+                    <li><a href="#" data-section-id="aboutSection">Sobre Nosotros</a></li>
+                    <li><a href="#" data-section-id="exploreSection">Explorar</a></li>
+                    <li><a href="#" data-section-id="storesSection">Tiendas</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar juegos...">
+                <div id="searchResults" class="search-results">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="homeSection" class="content-section active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h2>Bienvenido a GamerHub</h2>
+                    <p>Tu epicentro para descubrir, explorar y mantenerte al día con el vibrante mundo de los videojuegos. ¡Prepárate para tu próxima aventura digital!</p>
+                    <button class="btn-primary" data-section-id="exploreSection">Explorar Juegos Ahora</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="exploreSection" class="games-showcase-section content-section">
+            <h2>Juegos Destacados</h2>
+            <div class="games-grid-container">
+                <div class="game-card" data-name="Stellar Blade" data-price="219000" data-store="Epic Games">
+                    <img src="img/Stellar Blade.jpg" alt="Stellar Blade">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">Stellar Blade</h3>
+                        <p class="game-price">219.000 COP</p>
+                    </div>
+                </div>
+                <div class="game-card" data-name="The Alters" data-price="81000" data-store="Epic Games">
+                    <img src="img/The Alters.jpg" alt="The Alters">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">The Alters</h3>
+                        <p class="game-price">81.000 COP</p>
+                    </div>
+                </div>
+                <div class="game-card" data-name="Dave The Diver" data-price="28500" data-store="Epic Games">
+                    <img src="img/DAVE THE DIVER.jpg" alt="Dave The Diver">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">DAVE THE DIVER</h3>
+                        <div class="price-info">
+                            <span class="discount">-40%</span>
+                            <span class="original-price">47.500 COP</span>
+                            <p class="game-price">28.500 COP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-card" data-name="Two Point Museum" data-price="83920" data-store="Epic Games">
+                    <img src="img/Two Point Museum.jpg" alt="Two Point Museum">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">Two Point Museum</h3>
+                        <div class="price-info">
+                            <span class="discount">-20%</span>
+                            <span class="original-price">104.900 COP</span>
+                            <p class="game-price">83.920 COP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-card" data-name="Popucom" data-price="42499" data-store="Epic Games">
+                    <img src="img/POPUCOM.jpg" alt="Popucom">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">POPUCOM</h3>
+                        <p class="game-price">42.499 COP</p>
+                    </div>
+                </div>
+                <div class="game-card" data-name="FBC Firebreak" data-price="82999" data-store="Epic Games">
+                    <img src="img/FBC - Firebreak.jpg" alt="FBC Firebreak">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">FBC: Firebreak</h3>
+                        <p class="game-price">82.999 COP</p>
+                    </div>
+                </div>
+                <div class="game-card" data-name="Marvel’s Spider-Man 2" data-price="219000" data-store="Epic Games">
+                    <img src="img/Spider-Man 2.jpg" alt="Marvel’s Spider-Man 2">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">Marvel’s Spider-Man 2</h3>
+                        <p class="game-price">219.000 COP</p>
+                    </div>
+                </div>
+                <div class="game-card" data-name="Grand Theft Auto V Enhanced" data-price="119900" data-store="Epic Games">
+                    <img src="img/Grand Theft Auto V Enhanced.jpg" alt="Grand Theft Auto V Enhanced">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">Grand Theft Auto V Enhanced</h3>
+                        <p class="game-price">119.900 COP</p>
+                    </div>
+                </div>
+                <div class="game-card" data-name="The Last of Us™ Part II Remastered" data-price="184000" data-store="Epic Games">
+                    <img src="img/The Last of Us Part II Remastered.jpg" alt="The Last of Us™ Part II Remastered">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">The Last of Us™ Part II Remastered</h3>
+                        <p class="game-price">184.000 COP</p>
+                    </div>
+                </div>
+                <div class="game-card" data-name="Fortnite" data-price="Gratis" data-store="Epic Games">
+                    <img src="img/Fortnite.jpg" alt="Fortnite">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">Fortnite</h3>
+                        <p class="game-price">Gratis</p>
+                    </div>
+                </div>
+                <div class="game-card" data-name="Hogwarts Legacy" data-price="189999" data-store="Epic Games">
+                    <img src="img/Hogwarts Legacy.jpg" alt="Hogwarts Legacy">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">Hogwarts Legacy</h3>
+                        <p class="game-price">189.999 COP</p>
+                    </div>
+                </div>
+                <div class="game-card" data-name="EA SPORTS FC™ 25 Standard Edition" data-price="279999" data-store="Epic Games">
+                    <img src="img/EA SPORTS FC 25 Standard Edition.jpg" alt="EA SPORTS FC™ 25 Standard Edition">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">EA SPORTS FC™ 25 Standard Edition</h3>
+                        <p class="game-price">279.999 COP</p>
+                    </div>
+                </div>
+                <div class="game-card" data-name="STAR WARS™ Battlefront™ II: Celebration Edition" data-price="159999" data-store="Epic Games">
+                    <img src="img/STAR WARS Battlefront 2 - Celebration Edition.jpg" alt="STAR WARS™ Battlefront™ II: Celebration Edition">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">STAR WARS™ Battlefront™ II: Celebration Edition</h3>
+                        <p class="game-price">159.999 COP</p>
+                    </div>
+                </div>
+                <div class="game-card" data-name="VALORANT" data-price="Gratis" data-store="Epic Games">
+                    <img src="img/VALORANT.jpg" alt="VALORANT">
+                    <div class="game-info">
+                        <span class="game-type">Juego base</span>
+                        <h3 class="game-title">VALORANT</h3>
+                        <p class="game-price">Gratis</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-nav-btn prev-grid" data-scroll-direction="-1">❮</button>
+            <button class="carousel-nav-btn next-grid" data-scroll-direction="1">❯</button>
+        </section>
+
+        <section id="aboutSection" class="about-section content-section">
+            <h2>Sobre Nosotros</h2>
+            <div class="about-content">
+                <p>En <strong>GamerHub</strong>, somos apasionados por los videojuegos, y nuestra misión es ser tu guía definitiva en este universo en constante expansión. Desde los lanzamientos más esperados hasta los clásicos atemporales, te ofrecemos las últimas noticias, análisis detallados y acceso directo a tus tiendas favoritas.</p>
+                <p>Creemos que la comunidad es el corazón de la experiencia gamer. Por eso, nos esforzamos por construir un espacio donde puedas descubrir nuevos juegos, conectar con otros entusiastas y encontrar las mejores ofertas. ¡Únete a nuestra aventura y lleva tu experiencia de juego al siguiente nivel!</p>
+                <img src="https://via.placeholder.com/600x300/e94560/FFFFFF?text=Comunidad+Gamer" alt="Comunidad Gamer"> 
+            </div>
+        </section>
+
+        <section id="storesSection" class="stores-section content-section">
+            <h2>Encuentra tus Juegos Favoritos en sus Tiendas Oficiales</h2>
+            <div class="store-buttons">
+                <a href="https://www.epicgames.com/" target="_blank" class="store-btn epic-games">
+                    <i class="fas fa-gamepad"></i> Epic Games
+                </a>
+                <a href="https://gaming.amazon.com/" target="_blank" class="store-btn prime-gaming">
+                    <i class="fas fa-box-open"></i> Prime Gaming
+                </a>
+                <a href="https://store.steampowered.com/" target="_blank" class="store-btn steam">
+                    <i class="fab fa-steam"></i> Steam
+                </a>
+                <a href="https://www.xbox.com/es-CO/games/store" target="_blank" class="store-btn xbox">
+                    <i class="fab fa-xbox"></i> Xbox Store
+                </a>
+                <a href="https://store.playstation.com/es-co/" target="_blank" class="store-btn playstation">
+                    <i class="fab fa-playstation"></i> PlayStation Store
+                </a>
+                <a href="https://www.nintendo.com/es-co/store/games/" target="_blank" class="store-btn nintendo">
+                    <i class="fas fa-gamepad"></i> Nintendo eShop
+                </a>
+            </div>
+        </section>
+
+        <section id="gameDetailsSection" class="game-details-section content-section">
+            <button class="back-button" data-action="goBackToExplore"><i class="fas fa-arrow-left"></i> Volver a Explorar</button>
+            <div class="game-details-header">
+                <div class="game-media">
+                    <div class="main-media-container">
+                        <div id="youtubePlayer"></div> 
+                    </div>
+                    <div class="gallery-thumbnails" id="gameDetailsThumbnails">
+                        </div>
+                </div>
+                <div class="game-sidebar">
+                    <img id="gameDetailsCover" src="" alt="Carátula del Juego" class="game-sidebar-cover">
+                    <h2 id="gameDetailsTitle"></h2> 
+                    <p class="game-sidebar-price" id="gameDetailsPrice"></p>
+                    <div class="game-actions">
+                        <button class="btn-buy"><i class="fas fa-shopping-cart"></i> Comprar ahora</button>
+                        <button class="btn-add-cart"><i class="fas fa-plus"></i> Añadir al carrito</button>
+                        <button class="btn-wishlist"><i class="fas fa-heart"></i> A la lista de deseos</button>
+                    </div>
+                    <div class="game-meta">
+                        <p><strong>Clasificación:</strong> <span id="gameDetailsRating"></span></p>
+                        <p><strong>Tipo:</strong> <span id="gameDetailsType"></span></p>
+                        <p><strong>Recompensas:</strong> <span id="gameDetailsRewards"></span></p>
+                        <p><strong>Desarrollador:</strong> <span id="gameDetailsDeveloper"></span></p>
+                        <p><strong>Editor:</strong> <span id="gameDetailsPublisher"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-description">
+                <h3>Resumen</h3>
+                <p id="gameDetailsDescription"></p> 
+                <div class="game-details-nav">
+                    <button class="detail-nav-btn active">Resumen</button>
+                    <button class="detail-nav-btn">Complementos</button>
+                    <button class="detail-nav-btn">Logros</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 GamerHub. Todos los derechos reservados. Desarrollado por Santiago Andrés Herrera Trujillo.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitch.tv/" target="_blank" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Declaración de variables globales o encapsuladas en initApp
+        let lastActiveSectionId = 'homeSection'; 
+        let player; // Para el reproductor de YouTube
+
+        // --- Datos de los juegos ---
+        // ¡IMPORTANTE! Las imágenes y videos de los juegos APUNTAN A PLACEHOLDERS QUE FUNCIONAN en línea.
+        // Si quieres usar tus imágenes/videos locales, DEBERÁS DESCARGARLOS y REEMPLAZAR ESTAS URLS por tus RUTAS LOCALES CORRECTAS.
+        const allGames = [
+			{
+				name: "Stellar Blade",
+				img: "img/Stellar Blade.jpg", // Asegúrate de que esta imagen exista localmente
+				price: "219.000 COP",
+				coverImg: "img/Stellar Blade.jpg", // Asegúrate de que esta imagen exista localmente
+				mainMedia: "8qYyqvw1JPA", // ID de YouTube para Stellar Blade - Trailer de LANZAMIENTO en PC
+				mediaType: "youtube",
+				gallery: [
+					"img/Galeria_Stellar_Blade_1.jpg", // Asegúrate de que estas imágenes existan localmente
+					"img/Galeria_Stellar_Blade_2.jpg",
+					"img/Galeria_Stellar_Blade_3.jpg"
+				],
+				description: "Stellar Blade sumerge a los jugadores en una emocionante aventura de acción post-apocalíptica.",
+				rating: "T (Adolescentes)",
+				type: "Juego base",
+				rewards: "Recupera un 10%",
+				developer: "SHIFT UP Corp.",
+				publisher: "Sony Interactive Entertainment"
+			},
+			{
+				name: "The Alters",
+				img: "img/The Alters.jpg",
+				price: "81.000 COP",
+				coverImg: "img/The Alters.jpg",
+				mainMedia: "qzIS7-wT428", // ID de YouTube para Official Accolades Trailer - The Alters
+				mediaType: "youtube",
+				gallery: [
+					"img/Galeria_A_1.jpg",
+					"img/Galeria_A_2.jpg",
+					"img/Galeria_A_3.jpg",
+					"img/Galeria_A_4.jpg",
+					"img/Galeria_A_5.jpg"
+				],
+				description: "The Alters es una experiencia de ciencia ficción única donde Jan Dolski, un trabajador común.",
+				rating: "E10+ (Mayores de 10)",
+				type: "Juego base",
+				rewards: "N/A",
+				developer: "11 bit studios",
+				publisher: "11 bit studios"
+			},
+			{
+				name: "Dave The Diver",
+				img: "img/DAVE THE DIVER.jpg",
+				price: "28.500 COP",
+				originalPrice: "47.500 COP",
+				discount: "-40%",
+				coverImg: "img/DAVE THE DIVER.jpg",
+				mainMedia: "p85VHMpE0to", // ID de YouTube para el canal/playlist de Dave The Diver
+				mediaType: "youtube",
+				gallery: [
+					"img/Galeria_DTD_1.png",
+					"img/Galeria_DTD_2.png",
+					"img/Galeria_DTD_3.png",
+					"img/Galeria_DTD_4.png",
+					"img/Galeria_DTD_5.png"
+				],
+				description: "Dave the Diver es una aventura marina casual para un jugador con elementos de RPG y gestión.",
+				rating: "E10+ (Mayores de 10)",
+				type: "Juego base",
+				rewards: "N/A",
+				developer: "MINTROCKET",
+				publisher: "NEXON Korea Corp."
+			},
+			{
+				name: "Two Point Museum",
+				img: "img/Two Point Museum.jpg",
+				price: "83.920 COP",
+				originalPrice: "104.900 COP",
+				discount: "-20%",
+				coverImg: "img/Two Point Museum.jpg",
+				mainMedia: "I5H8M-r5pKI", // ID de YouTube para Two Point Museum: Fantasy Finds - Official Announce Trailer
+				mediaType: "youtube",
+				gallery: [
+					"img/Galeria_TPM_1.jpg",
+					"img/Galeria_TPM_2.jpg",
+					"img/Galeria_TPM_3.jpg",
+					"img/Galeria_TPM_4.jpg",
+					"img/Galeria_TPM_5.jpg"
+				],
+				description: "Construye, gestiona y cura una colección de artefactos extraños en Two Point Museum.",
+				rating: "E (Todos)",
+				type: "Juego base",
+				rewards: "N/A",
+				developer: "Two Point Studios",
+				publisher: "SEGA"
+			},
+			{
+				name: "Popucom",
+				img: "img/POPUCOM.jpg",
+				price: "42.499 COP",
+				coverImg: "img/POPUCOM.jpg",
+				mainMedia: "eL9f0HWOZX4", // ID de YouTube para Popucom - Official Announcement Trailer
+				mediaType: "youtube",
+				gallery: [
+					"img/Galeria_P_1.png",
+					"img/Galeria_P_3.png",
+					"img/Galeria_P_3.png",
+					"img/Galeria_P_4.png",
+					"img/Galeria_P_5.png"
+				],
+				description: "Popucom es un juego de plataformas multijugador en línea vibrante y competitivo.",
+				rating: "E (Todos)",
+				type: "Juego base",
+				rewards: "N/A",
+				developer: "Plug In Digital",
+				publisher: "GoolZilla"
+			},
+			{
+				name: "FBC Firebreak",
+				img: "img/FBC - Firebreak.jpg",
+				price: "82.999 COP",
+				coverImg: "img/FBC - Firebreak.jpg",
+				mainMedia: "3kRQt11b9fo", // ID de YouTube para FBC: Firebreak - Official Launch Trailer
+				mediaType: "youtube",
+				gallery: [
+					"img/Galeria_FBC_1.png",
+					"img/Galeria_FBC_2.jpg",
+					"img/Galeria_FBC_3.png",
+					"img/Galeria_FBC_4.jpg"
+				],
+				description: "FBC: Firebreak es un intenso juego de disparos en primera persona en un mundo al borde del colapso.",
+				rating: "M (Maduro)",
+				type: "Juego base",
+				rewards: "N/A",
+				developer: "Pixile Studios",
+				publisher: "Kwalee"
+			},
+            {
+                name: "Marvel’s Spider-Man 2",
+                img: "https://via.placeholder.com/250x350/800080/FFFFFF?text=Spider-Man+2+Card",
+                price: "219.000 COP",
+                coverImg: "https://via.placeholder.com/250x350/800080/FFFFFF?text=Spider-Man+2+Cover",
+                mainMedia: "zxhEpH-YDys", // <-- ID de video de YouTube para Spider-Man 2
+                mediaType: "youtube", // <--- Tipo 'youtube'
+                gallery: [
+                    "img/Galeria_SM2_1.jpg",
+                    "img/Galeria_SM2_2.jpg",
+                    "img/Galeria_SM2_3.jpg",
+                    "img/Galeria_SM2_4.jpg"
+                ],
+                description: "El increíble poder del simbionte lleva a Peter Parker y Miles Morales a una lucha desesperada.",
+                rating: "T (Adolescentes)",
+                type: "Juego base",
+                rewards: "Recupera un 20%",
+                developer: "Insomniac Games",
+                publisher: "Sony Interactive Entertainment"
+            },
+            {
+			name: "Grand Theft Auto V Enhanced",
+			img: "img/Grand Theft Auto V Enhanced.jpg",
+			price: "119.900 COP",
+			coverImg: "img/Grand Theft Auto V Enhanced.jpg",
+			mainMedia: "VNbONMSObfs", // ID de YouTube para GTA 5 Enhanced (Grand Theft Auto V) - Official PC Launch Trailer
+			mediaType: "youtube",
+			gallery: [
+				"img/Galeria_GTA5_1.jpg",
+				"img/Galeria_GTA5_2.jpg",
+				"img/Galeria_GTA5_3.jpg",
+				"img/Galeria_GTA5_4.jpg"
+			],
+			description: "Grand Theft Auto V es un mundo abierto masivo con tres historias interconectadas.",
+			rating: "M (Maduro)",
+			type: "Juego base",
+			rewards: "N/A",
+			developer: "Rockstar North",
+			publisher: "Rockstar Games"
+		},
+		{
+			name: "The Last of Us Part II Remastered",
+			img: "img/The Last of Us Part II Remastered.jpg",
+			price: "184.000 COP",
+			coverImg: "img/The Last of Us Part II Remastered.jpg",
+			mainMedia: "llaUBqovHw", // ID de YouTube para The Last Of Us Part.II Remastered (canal/playlist)
+			mediaType: "youtube",
+			gallery: [
+				"img/Galeria_TLU_1.jpg",
+				"img/Galeria_TLU_2.jpg",
+				"img/Galeria_TLU_3.jpg",
+				"img/Galeria_TLU_4.jpg"
+			],
+			description: "The Last of Us™ Part II Remastered continúa la historia en un mundo implacable y conmovedor.",
+			rating: "M (Maduro)",
+			type: "Juego base",
+			rewards: "N/A",
+			developer: "Naughty Dog",
+			publisher: "Sony Interactive Entertainment"
+		},
+		{
+			name: "Fortnite",
+			img: "img/Fortnite_Card.jpg",
+			price: "Gratis",
+			coverImg: "img/Fortnite_Cover.jpg",
+			mainMedia: "53", // ID de YouTube para Fortnite Trailers (playlist)
+			mediaType: "youtube",
+			gallery: [
+				"img/Fortnite_Gal1.jpg",
+				"img/Fortnite_Gal2.jpg",
+				"img/Fortnite_Gal3.jpg"
+			],
+			description: "Fortnite es un battle royale gratuito donde 100 jugadores luchan por ser el último en pie.",
+			rating: "T (Adolescentes)",
+			type: "Juego base",
+			rewards: "N/A",
+			developer: "Epic Games",
+			publisher: "Epic Games"
+		},
+		{
+			name: "Hogwarts Legacy",
+			img: "img/HogwartsLegacy_Card.jpg",
+			price: "189.999 COP",
+			coverImg: "img/HogwartsLegacy_Cover.jpg",
+			mainMedia: "55", // ID de YouTube para Hogwarts Legacy - Official Cinematic Trailer 4K
+			mediaType: "youtube",
+			gallery: [
+				"img/HogwartsLegacy_Gal1.jpg",
+				"img/HogwartsLegacy_Gal2.jpg",
+				"img/HogwartsLegacy_Gal3.jpg",
+				"img/HogwartsLegacy_Gal4.jpg"
+			],
+			description: "Hogwarts Legacy es un RPG de mundo abierto inmersivo ambientado en el mundo mágico de 1800.",
+			rating: "T (Adolescentes)",
+			type: "Juego base",
+			rewards: "N/A",
+			developer: "Avalanche Software",
+			publisher: "Warner Bros. Games"
+		},
+		{
+			name: "EA SPORTS FC™ 25 Standard Edition",
+			img: "img/EAFC25_Card.jpg",
+			price: "279.999 COP",
+			coverImg: "img/EAFC25_Cover.jpg",
+			mainMedia: "57", // ID de YouTube para EA SPORTS FC 25 | Official Reveal Trailer
+			mediaType: "youtube",
+			gallery: [
+				"img/EAFC25_Gal1.jpg",
+				"img/EAFC25_Gal2.jpg",
+				"img/EAFC25_Gal3.jpg"
+			],
+			description: "EA SPORTS FC™ 25 es la nueva era del fútbol interactivo, con autenticidad sin igual.",
+			rating: "E (Todos)",
+			type: "Juego base",
+			rewards: "N/A",
+			developer: "EA Sports",
+			publisher: "Electronic Arts"
+		},
+		{
+			name: "STAR WARS™ Battlefront™ II: Celebration Edition",
+			img: "img/SWBF2_Card.jpg",
+			price: "159.999 COP",
+			coverImg: "img/SWBF2_Cover.jpg",
+			mainMedia: "59", // ID de YouTube para Star Wars Battlefront II: Full Length Reveal Trailer
+			mediaType: "youtube",
+			gallery: [
+				"img/SWBF2_Gal1.jpg",
+				"img/SWBF2_Gal2.jpg",
+				"img/SWBF2_Gal3.jpg",
+				"img/SWBF2_Gal4.jpg"
+			],
+			description: "STAR WARS™ Battlefront™ II te sumerge en épicas batallas de Star Wars desde las tres eras de la saga.",
+			rating: "T (Adolescentes)",
+			type: "Juego base",
+			rewards: "N/A",
+			developer: "DICE",
+			publisher: "Electronic Arts"
+		},
+		{
+			name: "VALORANT",
+			img: "img/Valorant_Card.jpg",
+			price: "Gratis",
+			coverImg: "img/Valorant_Cover.jpg",
+			mainMedia: "60", // ID de YouTube para INCURSIONS // Official Console Cinematic Trailer - VALORANT
+			mediaType: "youtube",
+			gallery: [
+				"img/Valorant_Gal1.jpg",
+				"img/Valorant_Gal2.jpg",
+				"img/Valorant_Gal3.jpg"
+			],
+			description: "VALORANT es un shooter táctico 5v5 basado en personajes ambientado en un escenario global.",
+			rating: "T (Adolescentes)",
+			type: "Juego base",
+			rewards: "N/A",
+			developer: "Riot Games",
+			publisher: "Riot Games"
+		}
+	];
+        // --- Función principal de inicialización de la aplicación ---
+        function initApp() {
+            // Manejo de eventos de navegación con data-attributes
+            document.querySelectorAll('nav.main-nav a').forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); // Evitar el comportamiento por defecto del enlace (salto)
+                    const sectionId = event.target.dataset.sectionId;
+                    showSection(sectionId, event.target);
+                });
+            });
+
+            // Manejo de eventos para botones de acción (ej. "Explorar Juegos Ahora")
+            document.querySelectorAll('button[data-section-id]').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const sectionId = event.target.dataset.sectionId;
+                    const correspondingNavLink = document.querySelector(`nav.main-nav a[data-section-id="${sectionId}"]`);
+                    showSection(sectionId, correspondingNavLink);
+                });
+            });
+			
+			document.querySelectorAll('.carousel-nav-btn').forEach(button => {
+				button.addEventListener('click', (event) => {
+					const direction = parseInt(event.target.dataset.scrollDirection);
+					scrollGames(direction);
+				});
+			});
+
+            // Manejo de eventos para la barra de búsqueda
+            document.getElementById('searchInput').addEventListener('keyup', filterGames);
+
+            // Ocultar resultados de búsqueda al hacer clic fuera
+            document.addEventListener('click', function(event) {
+                const searchContainer = document.querySelector('.search-container');
+                const searchResults = document.getElementById('searchResults');
+                if (!searchContainer.contains(event.target)) {
+                    searchResults.style.display = 'none';
+                }
+            });
+
+            // Manejo de evento para el botón "Volver a Explorar"
+            document.querySelector('.back-button[data-action="goBackToExplore"]').addEventListener('click', goBackToExplore);
+
+            // Inicializa la primera sección visible y activa el enlace correspondiente
+            showSection('homeSection', document.querySelector('nav.main-nav a[data-section-id="homeSection"]'));
+
+            // Cargar el IFrame Player API de YouTube asíncronamente
+            // Esta es la URL CORRECTA y FINAL.
+            var tag = document.createElement('script');
+            tag.src = "http://www.youtube.com/iframe_api"; 
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        }
+        
+        // --- FUNCIONES DE LA APLICACIÓN ---
+
+        // Esta función se ejecutará automáticamente por YouTube API cuando esté lista
+        function onYouTubeIframeAPIReady() {
+            console.log("YouTube IFrame Player API está lista.");
+            // Cualquier lógica que dependa de 'YT' puede ir aquí o ser llamada desde showGameDetails
+        }
+
+        // --- JavaScript para la barra de búsqueda ---
+        function filterGames() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const searchResults = document.getElementById('searchResults');
+            searchResults.innerHTML = ''; 
+
+            if (filter.length === 0) {
+                searchResults.style.display = 'none';
+                return;
+            }
+
+            const filteredGames = allGames.filter(game =>
+                game.name.toUpperCase().includes(filter)
+            );
+
+            if (filteredGames.length > 0) {
+                filteredGames.forEach(game => {
+                    const resultItem = document.createElement('div');
+                    resultItem.classList.add('search-result-item');
+                    resultItem.innerHTML = `
+                        <img src="${game.img}" alt="${game.name}">
+                        <span>${game.name}</span>
+                        <span class="search-result-price">${game.price}</span>
+                    `;
+                    resultItem.addEventListener('click', () => { // Usar addEventListener
+                        showGameDetails(game); 
+                        searchResults.style.display = 'none'; 
+                        input.value = ''; 
+                    });
+                    searchResults.appendChild(resultItem);
+                });
+                searchResults.style.display = 'block';
+            } else {
+                const noResultsItem = document.createElement('div');
+                noResultsItem.classList.add('search-result-item');
+                noResultsItem.style.justifyContent = 'center';
+                noResultsItem.style.color = '#a0a0a0';
+                noResultsItem.style.fontStyle = 'italic';
+                noResultsItem.innerHTML = `<span>No se encontraron resultados</span>`;
+                searchResults.appendChild(noResultsItem);
+                searchResults.style.display = 'block';
+            }
+        }
+
+        // --- JavaScript para el desplazamiento horizontal del carrusel de juegos ---
+        function scrollGames(direction) {
+            const container = document.querySelector('.games-grid-container');
+            if (container) {
+                const scrollAmount = container.clientWidth * 0.8;
+                container.scrollBy({
+                    left: direction * scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // --- Función para mostrar/ocultar secciones ---
+        function showSection(sectionIdToShow, activeLinkElement = null) {
+            const currentActiveSection = document.querySelector('main .content-section.active');
+            if (currentActiveSection && currentActiveSection.id !== 'gameDetailsSection') {
+                lastActiveSectionId = currentActiveSection.id;
+            }
+
+            const sections = document.querySelectorAll('main .content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const sectionToShow = document.getElementById(sectionIdToShow);
+            if (sectionToShow) {
+                sectionToShow.classList.add('active');
+            }
+
+            document.querySelectorAll('nav.main-nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            if (activeLinkElement) {
+                activeLinkElement.classList.add('active');
+            }
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // --- Función para mostrar detalles del juego ---
+        function showGameDetails(gameData) {
+            showSection('gameDetailsSection', null); 
+
+            document.getElementById('gameDetailsTitle').textContent = gameData.name;
+            document.getElementById('gameDetailsCover').src = gameData.coverImg;
+            document.getElementById('gameDetailsCover').alt = gameData.name;
+
+            const priceElement = document.getElementById('gameDetailsPrice');
+            if (gameData.discount && gameData.originalPrice) {
+                priceElement.innerHTML = `
+                    <span class="game-type">Juego base</span><br>
+                    <span class="discount-label">${gameData.discount}</span>
+                    <span class="original-price">${gameData.originalPrice}</span>
+                    <span class="current-price">${gameData.price}</span>
+                `;
+            } else {
+                priceElement.innerHTML = `<span class="game-type">Juego base</span><br><span class="current-price">${gameData.price}</span>`;
+            }
+
+            document.getElementById('gameDetailsDescription').textContent = gameData.description;
+            document.getElementById('gameDetailsRating').textContent = gameData.rating || 'N/A';
+            document.getElementById('gameDetailsType').textContent = gameData.type || 'N/A';
+            document.getElementById('gameDetailsRewards').textContent = gameData.rewards || 'N/A';
+            document.getElementById('gameDetailsDeveloper').textContent = gameData.developer || 'N/A';
+            document.getElementById('gameDetailsPublisher').textContent = gameData.publisher || 'N/A';
+
+            const mainMediaContainerParent = document.querySelector('.main-media-container');
+            mainMediaContainerParent.innerHTML = ''; 
+
+            if (gameData.mediaType === "youtube" && gameData.mainMedia) {
+                console.log("Intentando crear reproductor de YouTube para ID:", gameData.mainMedia);
+                
+                if (player && typeof player.destroy === 'function') {
+                    player.destroy();
+                    player = null; 
+                    console.log("Reproductor de YouTube existente destruido.");
+                }
+                
+                const youtubePlayerDiv = document.createElement('div');
+                youtubePlayerDiv.id = 'youtubePlayer'; 
+                mainMediaContainerParent.appendChild(youtubePlayerDiv);
+
+                // Comprobación de la API de YouTube antes de crear el reproductor
+                if (typeof YT !== 'undefined' && YT.Player) {
+                    player = new YT.Player('youtubePlayer', { 
+                        videoId: gameData.mainMedia,
+                        playerVars: {
+                            'autoplay': 1,      // Reproducir automáticamente
+                            'controls': 1,      // Mostrar controles
+                            'mute': 1,          // ¡Silenciado para permitir autoplay!
+                            'loop': 1,          // Reproducir en bucle
+                            'playlist': gameData.mainMedia, // Necesario para loop de un solo video
+                            'rel': 0,           // <--- ¡ASEGÚRATE DE QUE ESTO ESTÉ AQUÍ!
+                            'modestbranding': 1, // Ocultar el logo de YouTube en la barra de control
+                            'fs': 1             // Permitir pantalla completa
+                        },
+                        events: {
+                            'onReady': (event) => {
+                                event.target.playVideo(); 
+                                console.log("Reproductor de YouTube listo y reproduciendo.");
+                            },
+                            'onError': (error) => {
+                                console.error("[YouTube Player Error]:", error);
+                                console.warn("Asegúrate de que el ID del video de YouTube sea correcto y el video esté disponible públicamente. Código de error:", error.data);
+                            }
+                        }
+                    });
+                } else {
+                    console.error("YouTube IFrame Player API NO está cargada o lista. Fallback a imagen para YouTube.");
+                    const imgElement = document.createElement('img');
+                    imgElement.id = 'gameDetailsMainMedia'; 
+                    imgElement.classList.add('main-media-image');
+                    imgElement.src = `https://img.youtube.com/vi/${gameData.mainMedia}/hqdefault.jpg`; // Thumbnail de YouTube como fallback
+                    imgElement.alt = gameData.name + " (Video de YouTube no disponible)";
+                    mainMediaContainerParent.appendChild(imgElement);
+                }
+
+            } else if (gameData.mediaType === "video" && gameData.mainMedia) { // Lógica para video local
+                console.log("Creando elemento de video local para:", gameData.mainMedia); 
+                if (player && typeof player.destroy === 'function') {
+                    player.destroy();
+                    player = null; 
+                    console.log("Reproductor de YouTube destruido antes de cargar video local.");
+                }
+
+                const videoElement = document.createElement('video');
+                videoElement.id = 'gameDetailsMainMedia';
+                videoElement.classList.add('main-media-video');
+                videoElement.setAttribute('controls', ''); 
+                videoElement.setAttribute('autoplay', ''); 
+                videoElement.setAttribute('muted', '');    
+                videoElement.setAttribute('loop', '');     
+
+                const sourceElement = document.createElement('source');
+                sourceElement.src = gameData.mainMedia;
+                videoElement.appendChild(sourceElement);
+                videoElement.textContent = "Tu navegador no soporta la etiqueta de video o el formato no es compatible."; 
+                mainMediaContainerParent.appendChild(videoElement);
+
+                videoElement.play().catch(error => {
+                    console.warn(`[Video Playback Error - Local Video] El video de ${gameData.name} no se pudo reproducir. Causa:`, error);
+                    console.warn("Sugerencia: Verifica el formato del video (debe ser MP4 con H.264/AAC) y la ruta del archivo. Intenta transcodificar con HandBrake.");
+                });
+
+            } else { // Si es una imagen o no es tipo 'youtube' ni 'video'
+                console.log("Creando elemento de imagen para:", gameData.mainMedia || gameData.img); 
+                if (player && typeof player.destroy === 'function') {
+                    player.destroy();
+                    player = null; 
+                    console.log("Reproductor de YouTube destruido antes de cargar imagen.");
+                }
+                const imgElement = document.createElement('img');
+                imgElement.id = 'gameDetailsMainMedia'; 
+                imgElement.classList.add('main-media-image');
+                imgElement.src = gameData.mainMedia || gameData.img; 
+                imgElement.alt = gameData.name;
+                mainMediaContainerParent.appendChild(imgElement);
+            }
+
+            // Gallery Thumbnails
+            const thumbnailsContainer = document.getElementById('gameDetailsThumbnails');
+            thumbnailsContainer.innerHTML = ''; // Limpiar anteriores
+
+            if (gameData.gallery && gameData.gallery.length > 0) {
+                gameData.gallery.forEach(thumbSrc => {
+                    const img = document.createElement('img');
+                    img.src = thumbSrc;
+                    img.alt = `Galería de ${gameData.name}`;
+                    img.classList.add('thumbnail-item');
+                    img.addEventListener('click', () => updateMainMedia(thumbSrc, "image")); 
+                    thumbnailsContainer.appendChild(img);
+                });
+            }
+
+            // Añadir un thumbnail para el video principal a la galería si hay video de YouTube
+            if (gameData.mediaType === "youtube" && gameData.mainMedia) {
+                const youtubeThumbUrl = `https://img.youtube.com/vi/${gameData.mainMedia}/hqdefault.jpg`; 
+                const videoThumb = document.createElement('img');
+                videoThumb.src = youtubeThumbUrl; 
+                videoThumb.alt = `Video de ${gameData.name}`;
+                videoThumb.classList.add('thumbnail-item');
+                videoThumb.classList.add('video-thumbnail'); 
+                videoThumb.addEventListener('click', () => updateMainMedia(gameData.mainMedia, "youtube")); 
+                thumbnailsContainer.prepend(videoThumb); 
+            } else if (gameData.mediaType === "video" && gameData.mainMedia) { // Thumbnail para video local
+                const videoThumb = document.createElement('img');
+                // IMPORTANTE: Este es un placeholder. Si quieres tu propio thumbnail, usa una URL local.
+                videoThumb.src = "https://via.placeholder.com/150x85/000000/FFFFFF?text=Local+Video"; 
+                videoThumb.alt = `Video de ${gameData.name}`;
+                videoThumb.classList.add('thumbnail-item');
+                videoThumb.classList.add('video-thumbnail'); 
+                videoThumb.addEventListener('click', () => updateMainMedia(gameData.mainMedia, "video"));
+                thumbnailsContainer.prepend(videoThumb);
+            }
+        }
+
+        // --- Función para actualizar la imagen/video principal de la página de detalles ---
+        function updateMainMedia(src, type) {
+            console.log("Actualizando medio principal. Tipo:", type, "Fuente:", src); 
+            const mainMediaContainerParent = document.querySelector('.main-media-container');
+            mainMediaContainerParent.innerHTML = ''; // Limpiar el contenido actual
+
+            if (type === "youtube") {
+                if (player && typeof player.destroy === 'function') {
+                    player.destroy();
+                    player = null; 
+                    console.log("Reproductor de YouTube destruido antes de actualizar a nuevo YouTube video.");
+                }
+
+                const youtubePlayerDiv = document.createElement('div');
+                youtubePlayerDiv.id = 'youtubePlayer'; 
+                mainMediaContainerParent.appendChild(youtubePlayerDiv);
+
+                if (typeof YT !== 'undefined' && YT.Player) {
+                    player = new YT.Player('youtubePlayer', {
+                        videoId: src, 
+                        playerVars: {
+                            'autoplay': 1,
+                            'controls': 1,
+                            'mute': 1,
+                            'loop': 1,
+                            'playlist': src,
+                            'rel': 0,           // <--- ¡Y AQUÍ TAMBIÉN!
+                            'modestbranding': 1,
+                            'fs': 1
+                        },
+                        events: {
+                            'onReady': (event) => {
+                                event.target.playVideo();
+                            },
+                            'onError': (error) => {
+                                console.error("[YouTube Player Update Error]:", error);
+                            }
+                        }
+                    });
+                } else {
+                    console.error("YouTube IFrame Player API no está cargada para actualizar. Fallback a imagen.");
+                    const img = document.createElement('img');
+                    img.id = 'gameDetailsMainMedia';
+                    img.classList.add('main-media-image');
+                    img.src = `https://img.youtube.com/vi/${src}/hqdefault.jpg`; 
+                    img.alt = 'Video no disponible';
+                    mainMediaContainerParent.appendChild(img);
+                }
+
+            } else if (type === "video") { // Lógica para video local
+                if (player && typeof player.destroy === 'function') {
+                    player.destroy();
+                    player = null; 
+                    console.log("Reproductor de YouTube destruido antes de actualizar a video local.");
+                }
+                const videoElement = document.createElement('video');
+                videoElement.id = 'gameDetailsMainMedia';
+                videoElement.classList.add('main-media-video');
+                videoElement.setAttribute('controls', '');
+                videoElement.setAttribute('autoplay', ''); 
+                videoElement.setAttribute('muted', '');    
+                videoElement.setAttribute('loop', '');
+
+                const sourceElement = document.createElement('source');
+                sourceElement.src = src;
+                videoElement.appendChild(sourceElement);
+                videoElement.textContent = "Tu navegador no soporta la etiqueta de video o el formato no es compatible.";
+                mainMediaContainerParent.appendChild(videoElement);
+
+                videoElement.play().catch(error => {
+                    console.warn(`[Video Playback Error - Local Video Update] El video de ${src} no se pudo reproducir. Causa:`, error);
+                });
+            }
+            else { // Si es una imagen
+                if (player && typeof player.destroy === 'function') {
+                    player.destroy();
+                    player = null; 
+                    console.log("Reproductor de YouTube destruido antes de actualizar a imagen.");
+                }
+                const img = document.createElement('img');
+                img.id = 'gameDetailsMainMedia';
+                img.classList.add('main-media-image');
+                img.src = src;
+                img.alt = 'Contenido del Juego';
+                mainMediaContainerParent.appendChild(img);
+            }
+        }
+
+        // Función para volver a la sección anterior (usado por el botón "Volver")
+        function goBackToExplore() {
+            if (player && typeof player.destroy === 'function') {
+                player.destroy();
+                player = null; 
+                console.log("Reproductor de YouTube destruido al volver.");
+            }
+
+            let targetLink = document.querySelector(`nav.main-nav a[data-section-id="${lastActiveSectionId}"]`);
+            if (!targetLink) { // Fallback si no se encontró el link de la última sección activa
+                 targetLink = document.querySelector('nav.main-nav a[data-section-id="exploreSection"]');
+                 lastActiveSectionId = 'exploreSection'; 
+            }
+
+            showSection(lastActiveSectionId, targetLink);
+        }
+
+        // --- Iniciar la aplicación cuando el DOM esté completamente cargado ---
+        // ESTA ES LA ÚNICA LLAMADA A initApp. Asegura que todo el DOM está listo.
+        document.addEventListener('DOMContentLoaded', initApp);
+
+        // --- Esta función se ejecuta automáticamente cuando YouTube API está lista ---
+        // Debe ser una función global para que la API de YouTube pueda llamarla.
+        function onYouTubeIframeAPIReady() {
+            console.log("YouTube IFrame Player API está lista.");
+        }
+
+        // --- Cargar el IFrame Player API de YouTube asíncronamente ---
+        // (Esto va al final, después de initApp para que onYouTubeIframeAPIReady exista)
+        var tag = document.createElement('script');
+        tag.src = "http://www.youtube.com/iframe_api"; // URL CORRECTA y FINAL para la API de YouTube
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
+</body>
+</html>

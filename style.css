@@ -1,0 +1,863 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e; /* Color de fondo oscuro */
+    color: #e0e0e0; /* Color de texto claro */
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #0f3460;
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky; /* Se mantiene fijo al hacer scroll */
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.site-title {
+    font-size: 2.2em;
+    margin: 0;
+    color: #e94560;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+}
+
+/* Navegación Principal */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.05em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active { /* Para resaltar la página actual */
+    background-color: #e94560;
+    color: white;
+}
+
+/* Barra de Búsqueda */
+.search-container {
+    position: relative;
+    flex-grow: 1;
+    max-width: 350px;
+    margin-left: auto;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #e94560;
+    border-radius: 25px;
+    background-color: #2a2a4a;
+    color: white;
+    font-size: 0.95em;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#searchInput::placeholder {
+    color: #a0a0a0;
+}
+
+.search-results {
+    position: absolute;
+    background-color: #2a2a4a;
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #e94560;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    z-index: 99;
+    display: none;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid #3f3f5a;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background-color: #3f3f5a;
+}
+
+.search-result-item img {
+    width: 40px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-right: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.search-result-item span {
+    flex-grow: 1;
+    color: #e0e0e0;
+    font-size: 0.9em;
+}
+
+.search-result-item .search-result-price {
+    font-weight: bold;
+    color: #e94560;
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+/* Contenedor principal del contenido, adapta el padding */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Oculta todas las secciones por defecto y muestra solo la activa */
+.content-section {
+    display: none; /* Oculta todas las secciones por defecto */
+    background-color: #0f3460;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px; /* Espacio entre secciones si estuvieran apiladas */
+    text-align: center;
+    animation: fadeIn 0.5s ease-out; /* Animación de fade-in */
+}
+
+.content-section.active {
+    display: block; /* Muestra solo la sección con la clase 'active' */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+h1, h2 {
+    color: #e94560;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+/* SECCIÓN: HERO (INICIO) */
+.hero-section {
+    /* ¡IMPORTANTE! Esta imagen apunta a un placeholder que sí funciona. Luego podrás REEMPLAZARLA por tu imagen local 'img/hero_background.jpg' */
+    background-image: url('https://via.placeholder.com/1200x500/001f3f/FFFFFF?text=Fondo+Hero'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px; /* Más padding para el héroe */
+    display: flex; /* Centrar contenido */
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para el texto */
+    min-height: 400px; /* Altura mínima */
+    border-radius: 8px; /* Asegura bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Asegurar que no se pierda la sombra si content-section lo tiene */
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    color: white; /* Blanco para el título del héroe */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+.btn-primary {
+    background-color: #e94560;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px; /* Botón redondeado */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Para que el padding y border-radius funcionen bien */
+    border: none; /* Asegura que no tenga borde de botón por defecto */
+    cursor: pointer; /* Indica que es clickeable */
+}
+
+.btn-primary:hover {
+    background-color: #c4354b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* SECCIÓN: EXPLORAR (Juegos) */
+.games-showcase-section {
+    position: relative; /* Para posicionar las flechas de navegación si se usan */
+    overflow: hidden; /* Oculta cualquier cosa que se desborde */
+}
+
+.games-grid-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 15px;
+    gap: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #e94560 #2a2a4a;
+    justify-content: flex-start;
+}
+
+/* Estilo de la barra de desplazamiento para navegadores Webkit (Chrome, Safari) */
+.games-grid-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.games-grid-container::-webkit-scrollbar-track {
+    background: #2a2a4a;
+    border-radius: 10px;
+}
+
+.games-grid-container::-webkit-scrollbar-thumb {
+    background-color: #e94560;
+    border-radius: 10px;
+    border: 2px solid #2a2a4a;
+}
+
+.game-card {
+    flex: 0 0 auto;
+    width: 200px;
+    background-color: #2a2a4a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    scroll-snap-align: start;
+    border: 1px solid #3f3f5a;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    border-color: #e94560;
+}
+
+.game-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.game-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.game-type {
+    font-size: 0.8em;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.game-title {
+    font-size: 1.1em;
+    margin: 5px 0 10px 0;
+    color: #ffffff;
+    min-height: 40px;
+}
+
+.price-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.discount-label { /* Nuevo estilo para la etiqueta de descuento */
+    background-color: #e94560;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block; /* Para que el padding funcione bien */
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #a0a0a0;
+    font-size: 0.85em;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.game-price .current-price { /* Estilo para el precio actual dentro del game-price */
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #33FF57;
+    margin: 0;
+}
+
+
+/* Flechas de navegación para el carrusel de juegos (opcional) */
+.carousel-nav-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+.prev-grid { left: 10px; }
+.next-grid { right: 10px; }
+
+.carousel-nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* SECCIÓN: SOBRE NOSOTROS */
+.about-section {
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #c0c0c0;
+}
+
+.about-content strong {
+    color: #e94560;
+}
+
+.about-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* SECCIÓN: TIENDAS DE JUEGOS */
+.stores-section {
+    text-align: center;
+}
+
+.stores-section h2 {
+    margin-bottom: 30px;
+}
+
+.store-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.store-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 180px;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.store-btn i {
+    font-size: 1.3em;
+}
+
+.store-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Colores específicos para cada botón de tienda */
+.epic-games { background-color: #2a2a2a; }
+.epic-games:hover { background-color: #4a4a4a; }
+
+.prime-gaming { background-color: #007bff; }
+.prime-gaming:hover { background-color: #0056b3; }
+
+.steam { background-color: #1b2838; }
+.steam:hover { background-color: #2a3d52; }
+
+.xbox { background-color: #107c10; }
+.xbox:hover { background-color: #0b5e0b; }
+
+.playstation { background-color: #003791; }
+.playstation:hover { background-color: #00225d; }
+
+.nintendo { background-color: #e60012; }
+.nintendo:hover { background-color: #b3000e; }
+
+/* Pie de Página */
+footer {
+    background-color: #0f3460;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 2em;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #e94560;
+    transform: translateY(-3px);
+}
+
+/* === ESTILOS PARA LA SECCIÓN DE DETALLES DEL JUEGO === */
+.game-details-section {
+    text-align: left; /* Alineación de texto por defecto en esta sección */
+    padding: 20px 40px; /* Ajuste de padding para un layout más amplio */
+    display: none; /* Oculta por defecto, se muestra con JS */
+}
+
+.game-details-section h2 {
+    text-align: left; /* Alinear título a la izquierda */
+    margin-bottom: 15px;
+}
+
+.back-button {
+    background-color: #e94560;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 20px;
+    display: inline-flex; /* Para alinear el icono y el texto */
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #c4354b;
+}
+
+.game-details-header {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se envuelvan */
+    gap: 30px; /* Espacio entre las columnas */
+    margin-bottom: 30px;
+}
+
+.game-media {
+    flex: 3; /* Ocupa más espacio */
+    min-width: 300px; /* Ancho mínimo para el media */
+}
+
+.main-media-container {
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 para videos (altura es 56.25% del ancho) */
+    position: relative;
+    background-color: #000; /* Fondo negro para el video */
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que el video/imagen/iframe no se desborde */
+}
+
+/* Estilos para el elemento <video> cuando se inyecta */
+.main-media-video { /* Nueva clase para el video */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para asegurar que el video cubra el área */
+    border-radius: 8px;
+}
+
+/* Estilos para el elemento <img> cuando es el medio principal */
+.main-media-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el área */
+    border-radius: 8px;
+}
+
+/* Regla para que el iframe de YouTube ocupe todo el contenedor */
+.main-media-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Elimina el borde por defecto del iframe */
+    border-radius: 8px; /* Opcional: para que el iframe también tenga bordes redondeados */
+}
+
+
+.gallery-thumbnails {
+    display: flex;
+    overflow-x: auto; /* Scroll horizontal para las miniaturas */
+    gap: 10px;
+    padding: 10px 0; /* Padding para la barra de scroll */
+    justify-content: flex-start; /* Alinea al inicio */
+    scrollbar-width: thin;
+    scrollbar-color: #e94560 #2a2a4a;
+}
+
+.gallery-thumbnails::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-thumbnails::-webkit-scrollbar-track {
+    background: #2a2a4a;
+    border-radius: 10px;
+}
+
+.gallery-thumbnails::-webkit-scrollbar-thumb {
+    background-color: #e94560;
+    border-radius: 10px;
+    border: 2px solid #2a2a4a;
+}
+
+.thumbnail-item {
+    width: 120px; /* Ancho fijo para miniaturas */
+    height: 70px; /* Altura fija para miniaturas (aprox. 16:9 de 120px) */
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0; /* Evita que las miniaturas se encojan */
+}
+
+.thumbnail-item:hover {
+    border-color: #e94560;
+    transform: scale(1.05);
+}
+
+.thumbnail-item.video-thumbnail { /* Estilo específico para miniaturas de video si quieres */
+    border-color: #33FF57; 
+}
+
+
+.game-sidebar {
+    flex: 1; /* Ocupa el espacio restante */
+    min-width: 250px; /* Ancho mínimo para el sidebar */
+    background-color: #2a2a4a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra elementos en el sidebar */
+}
+
+.game-sidebar-cover {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.game-sidebar h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffffff; /* Título blanco en el sidebar */
+}
+
+.game-sidebar-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #33FF57;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos de precio en detalles (duplicados de game-card para consistencia) */
+.game-details-section .discount-label {
+    background-color: #e94560;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.game-details-section .original-price {
+    text-decoration: line-through;
+    color: #a0a0a0;
+    font-size: 0.9em;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.game-details-section .current-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #33FF57;
+}
+
+
+.game-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.game-actions button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-buy { background-color: #e94560; color: white; }
+.btn-buy:hover { background-color: #c4354b; transform: translateY(-2px); }
+
+.btn-add-cart { background-color: #3f3f5a; color: white; }
+.btn-add-cart:hover { background-color: #5a5a7a; transform: translateY(-2px); }
+
+.btn-wishlist { background-color: transparent; color: #e0e0e0; border: 1px solid #e0e0e0; }
+.btn-wishlist:hover { background-color: #3f3f5a; border-color: #e94560; transform: translateY(-2px); }
+
+
+.game-meta {
+    width: 100%;
+    font-size: 0.95em;
+    color: #c0c0c0;
+    text-align: left; /* Alinea el texto a la izquierda dentro del meta */
+}
+
+.game-meta p {
+    margin-bottom: 8px;
+}
+
+.game-meta strong {
+    color: #e94560;
+}
+
+.game-description {
+    background-color: #2a2a4a;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.game-description h3 {
+    color: #e94560;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.game-description p {
+    color: #c0c0c0;
+    line-height: 1.8;
+}
+
+.game-details-nav {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    border-bottom: 1px solid #3f3f5a;
+    padding-bottom: 10px;
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+}
+
+.detail-nav-btn {
+    background-color: transparent;
+    color: #c0c0c0;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.detail-nav-btn.active {
+    color: #e94560;
+    border-bottom: 2px solid #e94560;
+    font-weight: bold;
+}
+
+.detail-nav-btn:hover:not(.active) {
+    color: white;
+}
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .search-container {
+        width: 100%;
+        max-width: 90%;
+        margin-left: 0;
+    }
+    #searchInput {
+        width: calc(100% - 20px);
+    }
+    .site-title {
+        font-size: 2em;
+    }
+
+    .hero-section {
+        padding: 60px 15px;
+        min-height: 300px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2em;
+    }
+
+    .games-grid-container {
+        justify-content: flex-start;
+    }
+    .game-card {
+        width: 160px;
+    }
+    .game-card img {
+        height: 220px;
+    }
+    .store-btn {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .content-section {
+        padding: 25px;
+    }
+
+    /* Ajustes para la sección de detalles del juego en móviles */
+    .game-details-section {
+        padding: 15px;
+    }
+    .game-details-header {
+        flex-direction: column; /* Apila los elementos en móviles */
+        gap: 20px;
+    }
+    .game-media {
+        min-width: unset;
+        width: 100%;
+    }
+    .main-media-container {
+        height: 200px; /* Altura fija para videos en móviles */
+        padding-bottom: 0; /* Desactiva padding-bottom si usas altura fija */
+    }
+    .game-sidebar {
+        min-width: unset;
+        width: 100%;
+    }
+    .gallery-thumbnails {
+        justify-content: center; /* Centra las miniaturas en móviles */
+    }
+    .thumbnail-item {
+        width: 80px; /* Miniaturas más pequeñas en móvil */
+        height: 45px;
+    }
+}
